@@ -59,17 +59,17 @@ CA = np.zeros(g.shape, dtype=int)
 
 # This sets the initial state to have the center call 'alive' and the
 # remainder of the cells 'dead'
-list_of_zeroes = [0]*(res/2 - 1)
-initial_state = list_of_zeroes + [1] + list_of_zeroes + [0]
+# list_of_zeroes = [0]*(res/2 - 1)
+# initial_state = list_of_zeroes + [1] + list_of_zeroes + [0]
 
 # Random initial state
-#initial_state = np.random.randint(2, size=res)
+initial_state = np.random.randint(2, size=res)
 
 # This puts the initial state into the grid.
 CA[0] = initial_state
 
 # Now we need to update the remaining states according to the Wolf code:
-rule = 89
+rule = 109
 
 # We have the function that updates a given state. This has one minor alteration
 # compared to the original. We need to turn the input list into a string and
@@ -223,5 +223,5 @@ figure = plt.figure(figsize=[15,10])
 plt.axis('off')
 plt.title('One Dimensional Cellular Automata: Wolfram Code = %s. \nOff Grid = "Alive"' % rule)
 plt.imshow(CA, cmap='hot',extent=[-1.5, 1.5, -1, 1])
-#plt.savefig('CA90.png')
+plt.savefig("CA%s.png" % rule)
 plt.show()
