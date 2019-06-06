@@ -143,6 +143,7 @@ CA[0] = initial_state
 for i in range(1,res):
     CA[i] = list(np_onedim_CA(CA[i-1],rule))
     automata.append(copy.deepcopy(CA))
+    # Print current progress.
     print 'Automata iterating Step: %s' % i
 
 image = []
@@ -151,6 +152,7 @@ count = 1
 for data in automata:
     plt_im = plt.imshow(data, cmap='hot',extent=[-1.5, 1.5, -1, 1], animated = True)
     image.append([plt_im])
+    # Print current progress.
     print 'Creating image %s' % count
     count = count + 1
 
