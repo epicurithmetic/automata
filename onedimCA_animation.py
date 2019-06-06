@@ -159,7 +159,14 @@ for i in range(0,256):
     automata.append([plt_im])
     print 'Appended Wolf code %s' % i
 
+    # Save each figure as we go.
+    plt.savefig('CA%s.png' % i)
+
 # ArtistAnimation does all of the stiching together of the frames for us.
 ani = animation.ArtistAnimation(fig, automata, interval = 2000, blit=True,
                                 repeat_delay=0)
 plt.show()
+
+# Particular interesting instances, to my eye, occur at: 73, 109, 138, 139,
+#                                                        154, 155, 166(!)
+#                                                        169, 170, 210, 240
