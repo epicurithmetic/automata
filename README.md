@@ -5,7 +5,9 @@ Code related to the wonderful world of cellular automata.
 (2) onedimCA_print.py uses matplotlib to output a nicer picture. Allowing for finer resolution.
     Also this second script has two different evolution functions pertaining to different choices for the off-end cells:
        (i) I think it is convention to set the off-end cells to 'alive' i.e. 1. First function does this.
-       (ii) But the second function sets the off-end cell equal to the last cell at the opposite end i.e. wraps grid into a cylinder.
+       (ii) But the second function sets the off-end cell equal to the last cell at the opposite end i.e. wraps grid into a                 cylinder.
+       
+Animations: onedimCA_animation.py produces an animation of all 256 Elementary Cellular Automata each with a different random initial state. Whereas, onedimCA_animationfixedrule.py produces an animation of the evolution of a fixed rule from a random initial state. 
 
 Next job is to write a script which produces "Conway's Game of Life" and other 2D cellular automata. 
 
