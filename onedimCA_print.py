@@ -44,33 +44,6 @@ def decimal_to_binary(integer):
 
     return binaryrep
 
-# Grid resolution
-res = 1000
-
-# Create the grid (g) to put the cells in.
-x = np.linspace(0,1,res)
-y = np.linspace(0,1,res)
-g = x[np.newaxis,:] + y[:,np.newaxis]
-
-# Array of zeroes which will eventually be the output to print.
-CA = np.zeros(g.shape, dtype=int)
-
-# Set the initial state. Update CA to have this as the first row.
-
-# This sets the initial state to have the center call 'alive' and the
-# remainder of the cells 'dead'
-# list_of_zeroes = [0]*(res/2 - 1)
-# initial_state = list_of_zeroes + [1] + list_of_zeroes + [0]
-
-# Random initial state
-initial_state = np.random.randint(2, size=res)
-
-# This puts the initial state into the grid.
-CA[0] = initial_state
-
-# Now we need to update the remaining states according to the Wolf code:
-rule = 109
-
 # We have the function that updates a given state. This has one minor alteration
 # compared to the original. We need to turn the input list into a string and
 # then back into a list to output it.
@@ -215,13 +188,42 @@ def np_onedim_CA_cylinder(state, wolf_code):
 
     return updated_state
 
+# Grid resolution
+res = 1000
+
+# Create the grid (g) to put the cells in.
+x = np.linspace(0,1,res)
+y = np.linspace(0,1,res)
+g = x[np.newaxis,:] + y[:,np.newaxis]
+
+# Array of zeroes which will eventually be the output to print.
+CA = np.zeros(g.shape, dtype=int)
+
+# Set the initial state. Update CA to have this as the first row.
+
+# This sets the initial state to have the center call 'alive' and the
+# remainder of the cells 'dead'
+# list_of_zeroes = [0]*(res/2 - 1)
+# initial_state = list_of_zeroes + [1] + list_of_zeroes + [0]
+
+# Random initial state
+initial_state = np.random.randint(2, size=res)
+
+# This puts the initial state into the grid.
+CA[0] = initial_state
+
+# Now we need to update the remaining states according to the Wolf code:
+rule = 104
+
 for i in range(1,res):
-    CA[i] = list(np_onedim_CA(CA[i-1],rule))
+    CA[i] = list(np_onedim_CA(CA[i-1],j))
 
 # Displays the figure. Define title for figure. Saves the figure.
-figure = plt.figure(figsize=[15,10])
+plt.figure(figsize=[15,10],facecolor = 'black')
 plt.axis('off')
-plt.title('One Dimensional Cellular Automata: Wolfram Code = %s. \nOff Grid = "Alive"' % rule)
+plt.title(('Elementary Cellular Automaton: Wolfram Code = %s.' % rule), color='1')
 plt.imshow(CA, cmap='hot',extent=[-1.5, 1.5, -1, 1])
-plt.savefig("CA%s.png" % rule)
-plt.show()
+plt.savefig("CA%s.png" % rule,facecolor = 'black')
+
+print 'Saved image %s' % j
+#plt.show()
