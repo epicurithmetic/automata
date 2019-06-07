@@ -212,19 +212,21 @@ initial_state = np.random.randint(2, size=res)
 # This puts the initial state into the grid.
 CA[0] = initial_state
 
-
 # Now we need to update the remaining states according to the Wolf code:
-rule = 90
+rule = 68
 
+# This loop produces the data for the image.
 for i in range(1,res):
-    CA[i] = list(np_onedim_CA(CA[i-1],j))
+    CA[i] = list(np_onedim_CA(CA[i-1],rule))
 
 # Displays the figure. Define title for figure. Saves the figure.
 plt.figure(figsize=[15,10],facecolor = 'black')
 plt.axis('off')
 plt.title(('Elementary Cellular Automaton: Wolfram Code = %s.' % rule), color='1')
 plt.imshow(CA, cmap='hot',extent=[-1.5, 1.5, -1, 1])
-plt.savefig("CA%s.png" % rule, facecolor = 'black')
 
-print 'Saved image %s' % j
-#plt.show()
+# Be mindful to not overwrite images already made.
+#plt.savefig("CA%s_green.png" % rule, facecolor = 'black')
+#print 'Saved image %s' % rule
+
+plt.show()
