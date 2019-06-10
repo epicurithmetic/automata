@@ -11,7 +11,9 @@ Animations: onedimCA_animation.py produces an animation of all 256 Elementary Ce
 
 life.py and life_aux.py (together) run John Conway's "Game of Life". Again, it is assumed that off-end cells are all dead. 
             
-Jobs to-do:     i. Write functions which generate interesting initial conditions for life.
+Jobs to-do:     
+                
+                i. Write functions which generate interesting initial conditions for life.
 
                ii. Figure out how to set up initial conditions in an easy manner. 
                
