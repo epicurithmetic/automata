@@ -9,10 +9,12 @@ Code related to the wonderful world of cellular automata.
        
 Animations: onedimCA_animation.py produces an animation of all 256 Elementary Cellular Automata each with a different random initial state. Whereas, onedimCA_animationfixedrule.py produces an animation of the evolution of a fixed rule from a random initial state. 
 
-life.py and life_aux.py (together) run John Conway's "Game of Life"
+life.py and life_aux.py (together) run John Conway's "Game of Life". Again, it is assumed that off-end cells are all dead. 
             
 Jobs to-do:     i. Write functions which generate interesting initial conditions for life.
+
                ii. Figure out how to set up initial conditions in an easy manner. 
+               
               iii. Dream: Make an app which allows user to click cells on/off in order to define the initial condition. 
 
 Unfortunately GLaDOS has infected one of my scripts. If she promises you cake, do not believe her. 
