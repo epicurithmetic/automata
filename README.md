@@ -18,5 +18,7 @@ Jobs to-do:
                ii. Figure out how to set up initial conditions in an easy manner. 
                
               iii. Dream: Make an app which allows user to click cells on/off in order to define the initial condition. 
+              
+               iv. Dream: Have the board move with a dynamic part i.e. (effectively) infinite board 
 
 Unfortunately GLaDOS has infected one of my scripts. If she promises you cake, do not believe her. 
