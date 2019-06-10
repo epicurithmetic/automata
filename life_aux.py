@@ -161,7 +161,7 @@ def ConwayLifePrinter(grid):
         will be used to animate the moments together.
 
         Basically it turns the rows into strings. Moreover, turns the 0 to space
-        and turns the 1s to #. 
+        and turns the 1s to #.
 
     """
 
@@ -188,3 +188,24 @@ def ConwayLifePrinter(grid):
 # ----------------------------------------------------------------------------
 #                 Creating objects to put into arrays.
 # ----------------------------------------------------------------------------
+
+# I hope to have ready made initial states which can easily be
+# imbedded into the initial numpy array. This will save having to enter
+# each initial state every time I want to use it. 
+
+# Fixed initial conditions.
+def hive():
+
+    '''
+        The "hive" is known as a "still-life" as it does not change
+        according to Conway's rules.
+        Output: numpy.ndarray which can be imbedded into an instance of
+        "Game of Life".
+
+        Size 3 by 4.
+
+    '''
+
+    hive = np.array([[0,1,1,0],[1,0,0,1],[0,1,1,0]])
+
+    return hive

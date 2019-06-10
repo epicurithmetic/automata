@@ -93,4 +93,5 @@ for moment in life:
 
 ani = animation.ArtistAnimation(fig, life_flow, interval = 1000, blit=True,
                                 repeat_delay=0)
+
 plt.show()
