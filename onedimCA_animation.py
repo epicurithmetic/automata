@@ -111,7 +111,7 @@ def np_onedim_CA(state, wolf_code):
     return updated_state
 
 # Initiate the plot.
-fig = plt.figure()
+fig = plt.figure(facecolor = 'black')
 plt.axis('off')
 
 # Set the title of the plot.
