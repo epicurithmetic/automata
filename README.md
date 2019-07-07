@@ -31,4 +31,8 @@ PyPlot Printing: This uses the same algorithm to generate the data, but uses bit
 
 PyPlot Animations: Further to the higher resolution of images, matplotlib is employed to animate the processes. This yields GIFs which show the update process. (onedimCA_animation.py)
 
+![Elementary Automaton 90](https://github.com/epicurithmetic/automata/blob/master/elementary%20automata%20animations/CA_Rule90'.mp4)
+Notice: for this choice of initial conditions (one alive cell in the center and rest the rest dead) this process gives the Sierpinksi triangle fractal!
+
+
 
