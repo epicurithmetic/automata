@@ -1,24 +1,34 @@
-# Cellular Automata
-Code related to the wonderful world of cellular automata.
+### Cellular Automaton
 
-(1) cellularautomata.py is my first attempt. This script prints in the terminal.
-(2) onedimCA_print.py uses matplotlib to output a nicer picture. Allowing for finer resolution.
-    Also this second script has two different evolution functions pertaining to different choices for the off-end cells:
-       (i) I think it is convention to set the off-end cells to 'alive' i.e. 1. First function does this.
-       (ii) But the second function sets the off-end cell equal to the last cell at the opposite end i.e. wraps grid into a                 cylinder.
-       
-Animations: onedimCA_animation.py produces an animation of all 256 Elementary Cellular Automata each with a different random initial state. Whereas, onedimCA_animationfixedrule.py produces an animation of the evolution of a fixed rule from a random initial state. 
+In this repository I have code which implements one-dimensional and two-dimensional cellular automaton. This includes notes which could be used to learn what these automaton are. 
 
-life.py and life_aux.py (together) run John Conway's "Game of Life". Again, it is assumed that off-end cells are all dead. 
-            
-Jobs to-do:     
-                
-                i. Write functions which generate interesting initial conditions for life.
+---
 
-               ii. Figure out how to set up initial conditions in an easy manner. 
-               
-              iii. Dream: Make an app which allows user to click cells on/off in order to define the initial condition. 
-              
-               iv. Dream: Have the board move with a dynamic part i.e. (effectively) infinite board 
+#### Elementary Cellular Automata
 
-Unfortunately GLaDOS has infected one of my scripts. If she promises you cake, do not believe her. 
+Elementary (one-dimensional) cellular automata are are completely classified by Stephen Wolfram using the *Wolfram code* for elementary automaton code. Since the evolution of a state depends on its current state and that of its two direct neighbours, this yields eight evolution possibilities.
+
+***
+
+Example: Consider the case that a cell dies when it and both of its neighbours are alive, and otherwise lives (or comes alive). This can be represented with the following table.  
+
+        | 111 ||| 110 ||| 101 ||| 100 ||| 011 ||| 010 ||| 001 ||| 000 |
+        |  0  |||  1  |||  1  |||  1  |||  1  |||  1  |||  1  |||  1  |
+
+Notice it takes a binary string of length eight to specify each of the evolution rules i.e. a binary number of maximum length eight. This shows that there are 8^2 = 256 possible elementary cellular automaton. This example corresponds to Wolfram code = 127.
+
+Note: The Wolfram code for classification uses the table in the order given in this example. 
+
+***
+
+##### How does this code work
+
+Terminal Printing: Given an initial binary string this code updates the string based on a number (i.e. Wolfram code) between 0 - 255. Storing each iteration in a list. When all of the iterations are completed they are printed in the terminal under the map 0 = ' _ ' and 1 = ' # '. This does not make for high resolution images, but the complex structures of these automaton are still visible with this printing choice. (cellularautomata.py)
+
+PyPlot Printing: This uses the same algorithm to generate the data, but uses bitmap imaging and matplotlib/pyplot to make higher resolution images of the automaton. (onedimCA_print.py)
+
+![Elementary Automaton 73](https://github.com/epicurithmetic/automata/blob/master/CA73.png)
+
+PyPlot Animations: Further to the higher resolution of images, matplotlib is employed to animate the processes. This yields GIFs which show the update process. (onedimCA_animation.py)
+
+
