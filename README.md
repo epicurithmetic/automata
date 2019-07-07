@@ -27,11 +27,13 @@ Terminal Printing: Given an initial binary string this code updates the string b
 
 PyPlot Printing: This uses the same algorithm to generate the data, but uses bitmap imaging and matplotlib/pyplot to make higher resolution images of the automaton. (onedimCA_print.py)
 
-![Elementary Automaton 73](https://github.com/epicurithmetic/automata/blob/master/CA73.png)
+![Elementary Automaton 90](https://github.com/epicurithmetic/automata/blob/master/CA90_cylinder.png)
+
+Notice: for the choice of initial conditions of one alive cell in the center and rest the rest dead this process (Wolfram code 90) gives the famous fractal known as the *Sierpinksi triangle*.
 
 PyPlot Animations: Further to the higher resolution of images, matplotlib is employed to animate the processes. This yields mp4s which show the update process. (onedimCA_animation.py)
 
-Notice: for the choice of initial conditions one alive cell in the center and rest the rest dead this process gives the Sierpinksi triangle fractal! ![Elementary Automaton 90](https://github.com/epicurithmetic/automata/blob/master/elementary%20automata%20animations/CA_Rule90'.mp4)
+ ![Elementary Automaton 90](https://github.com/epicurithmetic/automata/blob/master/elementary%20automata%20animations/CA_Rule90'.mp4)
 
 ---
 
