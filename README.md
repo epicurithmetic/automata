@@ -12,8 +12,8 @@ Elementary (one-dimensional) cellular automata are are completely classified by 
 
 Example: Consider the case that a cell dies when it and both of its neighbours are alive, and otherwise lives (or comes alive). This can be represented with the following table.  
 
-                                | 111 ||| 110 ||| 101 ||| 100 ||| 011 ||| 010 ||| 001 ||| 000 |
-                                |  0  |||  1  |||  1  |||  1  |||  1  |||  1  |||  1  |||  1  |
+                              | 111 ||| 110 ||| 101 ||| 100 ||| 011 ||| 010 ||| 001 ||| 000 |
+                              |  0  |||  1  |||  1  |||  1  |||  1  |||  1  |||  1  |||  1  |
 
 Notice it takes a binary string of length eight to specify each of the evolution rules i.e. a binary number of maximum length eight. This shows that there are 8^2 = 256 possible elementary cellular automaton. This example corresponds to Wolfram code = 127.
 
@@ -37,7 +37,15 @@ Notice: for the choice of initial conditions one alive cell in the center and re
 
 #### Two Dimensional Cellular Automata: Conway's Game of Life
 
-We have seen that there are only finitely many (256) elementary automaton. Moving up one dimension to two dimensional automaton opens us up to infinitely many possibilities. My code considers only one of these inifinite possibilities; the automaton called Conway's Game of Life*, often referred to simply as **Life**.
+We have seen that there are only finitely many (256) elementary automaton. Moving up one dimension to two dimensional automaton opens us up to infinitely many possibilities. My code considers only one of these inifinite possibilities; the automaton called *Conway's Game of Life*, often referred to simply as **Life**.
+
+##### Update Rules for Life
+
+
+##### Examples 
+
+
+##### Further Tasks to Complete
 
 
 
