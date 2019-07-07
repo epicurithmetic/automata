@@ -8,7 +8,7 @@ In this repository I have code which implements one-dimensional and two-dimensio
 
 Elementary (one-dimensional) cellular automata are are completely classified by Stephen Wolfram using the *Wolfram code* for elementary automaton code. Since the evolution of a state depends on its current state and that of its two direct neighbours, this yields eight evolution possibilities.
 
-***
+*
 
 Example: Consider the case that a cell dies when it and both of its neighbours are alive, and otherwise lives (or comes alive). This can be represented with the following table.  
 
@@ -19,7 +19,7 @@ Notice it takes a binary string of length eight to specify each of the evolution
 
 Note: The Wolfram code for classification uses the table in the order given in this example. 
 
-***
+*
 
 ##### How does this code work
 
