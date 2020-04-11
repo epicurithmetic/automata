@@ -3,13 +3,13 @@
 # First job: write a function that updates a list according to one
 #            of the Wolfram rules.
 
-print '\n'
-print 'One-Dimensional Cellular Automata:\n'
+print('\n')
+print('One-Dimensional Cellular Automata:\n')
 
 # Specify the rule number using Wolfram's code - Integer (0 - 255)
 # This is now input by the user in each run.
 rule = 90
-print '\n'
+print('\n')
 
 
 ## Note: Once the code is working, we can ask the user to input the rule they
@@ -74,12 +74,12 @@ rule_evolultion = { '111': rule_binary[0],
 
 # Print this dictionary in a table to tell the user how the states update.
 
-print 'This table explains how Rule %s updates a state based upon (i) its current state' % rule
-print 'and (ii) the state of its immediate neighbours.'
-print '-'*63
-print '| 111 ||| 110 ||| 101 ||| 100 ||| 011 ||| 010 ||| 001 ||| 000 |'
+print('This table explains how Rule %s updates a state based upon (i) its current state' % rule)
+print('and (ii) the state of its immediate neighbours.')
+print('-'*63)
+print('| 111 ||| 110 ||| 101 ||| 100 ||| 011 ||| 010 ||| 001 ||| 000 |')
 #print '\n'
-print '|  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |' % (rule_binary[0],
+print('|  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |' % (rule_binary[0],
                                                                                    rule_binary[1],
                                                                                    rule_binary[2],
                                                                                    rule_binary[3],
@@ -87,21 +87,21 @@ print '|  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |||  %s  |' 
                                                                                    rule_binary[5],
                                                                                    rule_binary[6],
                                                                                    rule_binary[7]
-                                                                                   )
-print 'Note: the end points of a finite state will be assumed to have an off-end'
-print '      neighbour in state 1.'
+                                                                                   ))
+print('Note: the end points of a finite state will be assumed to have an off-end')
+print('      neighbour in state 1.')
 
 
 # Now we need an initial condition to evolve.
-initial_state_1 = '101101001001010101001001'
+initial_state_1 = '0'*25 + "1" + "0"*25
 initial_state_2 = '010010010101010100100100'
 initial_state_3 = '111110010000100100010011'
 initial_state = initial_state_1 + initial_state_2 + initial_state_3
-print '\nThe initial state entered into the automata this time is:'
-print initial_state
-print 'When we print it we use the identification 0 = *blank* and 1 = #'
-print 'This way patterns are easier to discern.'
-print '\n'
+print('\nThe initial state entered into the automata this time is:')
+print(initial_state)
+print('When we print it we use the identification 0 = *blank* and 1 = #')
+print('This way patterns are easier to discern.')
+print('\n')
 
 # Define a function which updates a list according to a Wolfram code.
 def onedim_CA(state, wolf_code):
@@ -162,11 +162,11 @@ def onedim_CA(state, wolf_code):
 
 
 # Iterate the update function a number of times. Storing all of the states.
-sierpinski = [initial_state]
-updated_state = initial_state
+sierpinski = [initial_state_1]
+updated_state = initial_state_1
 iter = 1
 
-while iter < 30:
+while iter < 10:
     updated_state = onedim_CA(updated_state,rule)
     sierpinski.append(updated_state)
     iter += 1
@@ -192,4 +192,4 @@ for state in sierpinski:
 
 # Print the iterations.
 for state in sierpinski_printable:
-    print state
+    print(state)
