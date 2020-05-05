@@ -3,3 +3,5 @@
 *.txt
 *.pyc
  cellularautomata_glados.py
+onedimCA_animationfixedrule.py
+
